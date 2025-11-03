@@ -13,7 +13,8 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
   position: relative;
 }
 
@@ -32,8 +33,8 @@
   z-index: 1;
   text-align: center;
   color: white;
-  max-width: 800px;
-  padding: 2rem;
+  max-width: 50vw;
+  padding: 2vw;
 }
 
 .hero-content h1 {
@@ -41,6 +42,7 @@
   margin-bottom: 1rem;
   font-weight: 700;
   line-height: 1.2;
+  
 }
 
 .hero-content p {
@@ -52,8 +54,9 @@
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  padding-left: 22%;
 }
 
 .hero-buttons button {
