@@ -9,7 +9,7 @@ import PostJob from './components/PostJob';
 import Settings from './components/Settings';
 import DevelopmentInProgress from './components/DevelopmentInProgress';
 import './App.css';
-
+import ExplorePage from './components/ExplorePage';
 function App() {
   const location = useLocation();
   const hideNavbar = location.pathname === '/login' || location.pathname === '/signup';
@@ -31,7 +31,7 @@ function App() {
         <Route path="/support" element={<DevelopmentInProgress />} />
         <Route path="/privacy" element={<DevelopmentInProgress />} />
         <Route path="/faqs" element={<DevelopmentInProgress />} />
-        <Route path="/explore" element={<DevelopmentInProgress />} />
+        <Route path="/explore" element={<ExplorePage />} />
       </Routes>
     </div>
   );
