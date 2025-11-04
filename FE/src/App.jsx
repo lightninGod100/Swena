@@ -1,12 +1,27 @@
-import Navbar from './components/PublicNavbar';
+import { Routes, Route } from 'react-router-dom';
+import PublicNavbar from './components/PublicNavbar';
 import LandingPage from './components/LandingPage';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import DiscoverClient from './components/DiscoverClient';
+import DiscoverJobs from './components/DiscoverJobs';
+import PostJob from './components/PostJob';
+import Settings from './components/Settings';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <LandingPage />
+      <PublicNavbar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/discover" element={<DiscoverClient />} />
+        <Route path="/jobs" element={<DiscoverJobs />} />
+        <Route path="/post-job" element={<PostJob />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
     </div>
   );
 }
