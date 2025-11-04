@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // ADD THIS LINE
 import '../styles/LandingPage.css';
 import pajImage from '../assets/images/paj.png';
 import addDesignerImage from '../assets/images/sad.png';
@@ -14,6 +15,7 @@ import designer3Image from '../assets/images/d3.png';
 import designer4Image from '../assets/images/d4.png';
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.querySelector('.hero-section');
@@ -21,20 +23,20 @@ const LandingPage = () => {
 
       const scrollPosition = window.scrollY;
       const heroHeight = heroSection.offsetHeight;
-      
+
       // Calculate zoom scale based on scroll position
       // Starts at 1 (normal) and zooms in to 1.2 as user scrolls
       const maxZoom = 1.2;
       const scrollProgress = Math.min(scrollPosition / heroHeight, 1);
       const zoomScale = 1 + (scrollProgress * (maxZoom - 1));
-      
+
       // Set CSS variable for zoom effect
       heroSection.style.setProperty('--zoom-scale', zoomScale);
     };
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-    
+
     // Initial call to set scale on mount
     handleScroll();
 
@@ -51,8 +53,18 @@ const LandingPage = () => {
           <h1>Bringing Designers & Brands Together</h1>
           <p>Hire talent or offer your skills — collaborate, create, and thrive.</p>
           <div className="hero-buttons">
-            <button className="btn-primary">I need a Designer</button>
-            <button className="btn-secondary">I am a Designer</button>
+            <button
+              className="btn-primary"
+              onClick={() => navigate('/signup?type=Customer')}
+            >
+              I need a Designer
+            </button>
+            <button
+              className="btn-secondary"
+              onClick={() => navigate('/signup?type=Designer')}
+            >
+              I am a Designer
+            </button>
           </div>
         </div>
       </div>
@@ -62,7 +74,7 @@ const LandingPage = () => {
         <div className="steps-container">
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={pajImage} alt="Post a Job" />
+              <img src={pajImage} alt="Post a Job" />
             </div>
             <h3 className="step-title">1. Post a Job</h3>
             <p className="step-description">What needs to be done</p>
@@ -70,7 +82,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={addDesignerImage} alt="Add Designer" />
+              <img src={addDesignerImage} alt="Add Designer" />
             </div>
             <h3 className="step-title">2. Choose Designer</h3>
             <p className="step-description">Get bids and choose the best</p>
@@ -78,7 +90,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={trackProgressImage} alt="Track Progress" />
+              <img src={trackProgressImage} alt="Track Progress" />
             </div>
             <h3 className="step-title">3. Track Progress</h3>
             <p className="step-description">Chat and track the work 24/7</p>
@@ -86,7 +98,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={payImage} alt="Pay" />
+              <img src={payImage} alt="Pay" />
             </div>
             <h3 className="step-title">4. Pay</h3>
             <p className="step-description">Pay when you're satisfied</p>
@@ -100,7 +112,7 @@ const LandingPage = () => {
         <div className="steps-container">
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={discoverNewPostsImage} alt="Discover New Posts" />
+              <img src={discoverNewPostsImage} alt="Discover New Posts" />
             </div>
             <h3 className="step-title">1. Discover New Posts</h3>
             <p className="step-description">Browse available design opportunities</p>
@@ -108,7 +120,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={submitProposalImage} alt="Submit Proposal" />
+              <img src={submitProposalImage} alt="Submit Proposal" />
             </div>
             <h3 className="step-title">2. Submit Proposal</h3>
             <p className="step-description">Bid on projects that match your skills</p>
@@ -116,7 +128,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={doTheWorkImage} alt="Do the Work" />
+              <img src={doTheWorkImage} alt="Do the Work" />
             </div>
             <h3 className="step-title">3. Do the Work</h3>
             <p className="step-description">Create amazing designs for clients</p>
@@ -124,7 +136,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-            <img src={getPaidImage} alt="Get Paid" />
+              <img src={getPaidImage} alt="Get Paid" />
             </div>
             <h3 className="step-title">4. Get Paid</h3>
             <p className="step-description">Receive payment for completed work</p>
@@ -137,7 +149,7 @@ const LandingPage = () => {
         <div className="designers-container">
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-            <img src={designer1Image} alt="Designer 1" />
+              <img src={designer1Image} alt="Designer 1" />
             </div>
             <h3 className="designer-name">Sarah Johnson</h3>
             <div className="designer-rating">
@@ -149,7 +161,7 @@ const LandingPage = () => {
 
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-            <img src={designer2Image} alt="Designer 2" />
+              <img src={designer2Image} alt="Designer 2" />
             </div>
             <h3 className="designer-name">Michael Chen</h3>
             <div className="designer-rating">
@@ -161,7 +173,7 @@ const LandingPage = () => {
 
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-            <img src={designer3Image} alt="Designer 3" />
+              <img src={designer3Image} alt="Designer 3" />
             </div>
             <h3 className="designer-name">Emma Rodriguez</h3>
             <div className="designer-rating">
@@ -173,7 +185,7 @@ const LandingPage = () => {
 
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-            <img src={designer4Image} alt="Designer 4" />
+              <img src={designer4Image} alt="Designer 4" />
             </div>
             <h3 className="designer-name">David Kim</h3>
             <div className="designer-rating">

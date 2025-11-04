@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { useSearchParams } from 'react-router-dom'; 
 import '../styles/SignupPage.css';
 
 const SignupPage = ({ userType = '' }) => {
+  const [searchParams] = useSearchParams(); // ADD THIS LINE
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
-    type: userType, // Will be pre-filled if passed as prop
+    type: searchParams.get('type') || userType || '', // MODIFY THIS LINE
     password: '',
     confirmPassword: '',
     agreeToTerms: false
