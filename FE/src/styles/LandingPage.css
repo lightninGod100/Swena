@@ -248,8 +248,13 @@
   align-items: center;
   justify-content: center;
   border: 3px solid #00b67f;
+  z-index: 1;
 }
-
+.designer-avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .designer-name {
   font-size: 1.4rem;
   color: black;
@@ -460,3 +465,4 @@
     gap: 1rem;
   }
 }
+

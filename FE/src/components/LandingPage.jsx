@@ -1,5 +1,17 @@
 import React, { useEffect } from 'react';
 import '../styles/LandingPage.css';
+import pajImage from '../assets/images/paj.png';
+import addDesignerImage from '../assets/images/sad.png';
+import trackProgressImage from '../assets/images/progress.png';
+import payImage from '../assets/images/pay.png';
+import discoverNewPostsImage from '../assets/images/findjob.png';
+import submitProposalImage from '../assets/images/submit.png';
+import doTheWorkImage from '../assets/images/work.png';
+import getPaidImage from '../assets/images/gp.png';
+import designer1Image from '../assets/images/d1.png';
+import designer2Image from '../assets/images/d2.png';
+import designer3Image from '../assets/images/d3.png';
+import designer4Image from '../assets/images/d4.png';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -50,7 +62,7 @@ const LandingPage = () => {
         <div className="steps-container">
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={pajImage} alt="Post a Job" />
             </div>
             <h3 className="step-title">1. Post a Job</h3>
             <p className="step-description">What needs to be done</p>
@@ -58,7 +70,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={addDesignerImage} alt="Add Designer" />
             </div>
             <h3 className="step-title">2. Choose Designer</h3>
             <p className="step-description">Get bids and choose the best</p>
@@ -66,7 +78,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={trackProgressImage} alt="Track Progress" />
             </div>
             <h3 className="step-title">3. Track Progress</h3>
             <p className="step-description">Chat and track the work 24/7</p>
@@ -74,7 +86,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={payImage} alt="Pay" />
             </div>
             <h3 className="step-title">4. Pay</h3>
             <p className="step-description">Pay when you're satisfied</p>
@@ -88,7 +100,7 @@ const LandingPage = () => {
         <div className="steps-container">
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={discoverNewPostsImage} alt="Discover New Posts" />
             </div>
             <h3 className="step-title">1. Discover New Posts</h3>
             <p className="step-description">Browse available design opportunities</p>
@@ -96,7 +108,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={submitProposalImage} alt="Submit Proposal" />
             </div>
             <h3 className="step-title">2. Submit Proposal</h3>
             <p className="step-description">Bid on projects that match your skills</p>
@@ -104,7 +116,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={doTheWorkImage} alt="Do the Work" />
             </div>
             <h3 className="step-title">3. Do the Work</h3>
             <p className="step-description">Create amazing designs for clients</p>
@@ -112,7 +124,7 @@ const LandingPage = () => {
 
           <div className="step-card">
             <div className="step-icon-placeholder">
-              {/* Add icon here later */}
+            <img src={getPaidImage} alt="Get Paid" />
             </div>
             <h3 className="step-title">4. Get Paid</h3>
             <p className="step-description">Receive payment for completed work</p>
@@ -125,7 +137,7 @@ const LandingPage = () => {
         <div className="designers-container">
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-              {/* Add designer photo here later */}
+            <img src={designer1Image} alt="Designer 1" />
             </div>
             <h3 className="designer-name">Sarah Johnson</h3>
             <div className="designer-rating">
@@ -137,7 +149,7 @@ const LandingPage = () => {
 
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-              {/* Add designer photo here later */}
+            <img src={designer2Image} alt="Designer 2" />
             </div>
             <h3 className="designer-name">Michael Chen</h3>
             <div className="designer-rating">
@@ -149,7 +161,7 @@ const LandingPage = () => {
 
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-              {/* Add designer photo here later */}
+            <img src={designer3Image} alt="Designer 3" />
             </div>
             <h3 className="designer-name">Emma Rodriguez</h3>
             <div className="designer-rating">
@@ -161,7 +173,7 @@ const LandingPage = () => {
 
           <div className="designer-card">
             <div className="designer-avatar-placeholder">
-              {/* Add designer photo here later */}
+            <img src={designer4Image} alt="Designer 4" />
             </div>
             <h3 className="designer-name">David Kim</h3>
             <div className="designer-rating">
