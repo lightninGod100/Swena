@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import PublicNavbar from './components/PublicNavbar';
 import LandingPage from './components/LandingPage';
 import Signup from './components/Signup';
@@ -11,9 +11,12 @@ import DevelopmentInProgress from './components/DevelopmentInProgress';
 import './App.css';
 
 function App() {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/login' || location.pathname === '/signup';
+
   return (
     <div className="App">
-      <PublicNavbar />
+      {!hideNavbar && <PublicNavbar />}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
