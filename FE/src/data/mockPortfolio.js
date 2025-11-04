@@ -193,7 +193,7 @@ export const portfolioData = [
     },
     {
       id: 13,
-      image: "https://images.unsplash.com/photo-1594462258851-e0d2e4395753?w=800&h=1000&fit=crop",
+      image: "https://images.unsplash.com/photo-1667285964322-10c2630c9ae9?w=800&h=1000&fit=crop",
       title: "Minimalist Bridal Gown",
       category: "Bridal",
       designer: {
