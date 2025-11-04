@@ -275,19 +275,44 @@ const LandingPage = () => {
         </div>
       </div>
       {/* Footer Section */}
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-left">
-            <p className="footer-copyright">© 2025 SEWNA. All rights reserved.</p>
-          </div>
-          <div className="footer-right">
-            <a href="#contact" className="footer-link">Contact Us</a>
-            <a href="#privacy" className="footer-link">Privacy & Terms</a>
-            <a href="#faqs" className="footer-link">FAQs</a>
-            <a href="#support" className="footer-link">Support Us</a>
-          </div>
-        </div>
-      </footer>
+{/* Footer Section */}
+<footer className="footer">
+  <div className="footer-container">
+    <div className="footer-left">
+      <p className="footer-copyright">© 2025 SEWNA. All rights reserved.</p>
+    </div>
+    <div className="footer-right">
+      <span 
+        className="footer-link" 
+        onClick={() => navigate('/contact')}
+        style={{ cursor: 'pointer' }}
+      >
+        Contact Us
+      </span>
+      <span 
+        className="footer-link" 
+        onClick={() => navigate('/privacy')}
+        style={{ cursor: 'pointer' }}
+      >
+        Privacy & Terms
+      </span>
+      <span 
+        className="footer-link" 
+        onClick={() => navigate('/faqs')}
+        style={{ cursor: 'pointer' }}
+      >
+        FAQs
+      </span>
+      <span 
+        className="footer-link" 
+        onClick={() => navigate('/support')}
+        style={{ cursor: 'pointer' }}
+      >
+        Support Us
+      </span>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };

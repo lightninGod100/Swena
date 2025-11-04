@@ -1,0 +1,97 @@
+.dev-progress-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  }
+  
+  .dev-progress-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .dev-progress-icon {
+    margin: 0 auto 2rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00b67f;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+  
+  .dev-progress-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .dev-progress-message {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .dev-progress-message strong {
+    color: #00b67f;
+  }
+  
+  .dev-progress-subtitle {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+  
+  .back-home-btn {
+    padding: 0.875rem 2.5rem;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background: #00b67f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 182, 127, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dev-progress-title {
+      font-size: 2rem;
+    }
+  
+    .dev-progress-message {
+      font-size: 1.1rem;
+    }
+  
+    .dev-progress-container {
+      padding: 2rem 1.5rem;
+    }
+  }

@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="navbar-buttons">
           <button 
             className="btn-explore"
-            onClick={() => navigate('/discover')}
+            onClick={() => navigate('/explore')}
           >
             Explore
             <span className="search-icon">⌕</span>
