@@ -13,13 +13,21 @@ const Navbar = () => {
         </div>
         <div className="navbar-buttons">
           <button 
-            className="btn-designer"
+            className="btn-explore"
+            onClick={() => navigate('/discover')}
+          >
+            Explore
+            <span className="search-icon">⌕</span>
+            
+          </button>
+          <button 
+            className="btn-login"
             onClick={() => navigate('/login')}
           >
             Login
           </button>
           <button 
-            className="btn-need-designer"
+            className="btn-signup"
             onClick={() => navigate('/signup')}
           >
             Signup

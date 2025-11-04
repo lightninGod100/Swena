@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/LandingPage.css';
 
 const LandingPage = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector('.hero-section');
+      if (!heroSection) return;
+
+      const scrollPosition = window.scrollY;
+      const heroHeight = heroSection.offsetHeight;
+      
+      // Calculate zoom scale based on scroll position
+      // Starts at 1 (normal) and zooms in to 1.2 as user scrolls
+      const maxZoom = 1.2;
+      const scrollProgress = Math.min(scrollPosition / heroHeight, 1);
+      const zoomScale = 1 + (scrollProgress * (maxZoom - 1));
+      
+      // Set CSS variable for zoom effect
+      heroSection.style.setProperty('--zoom-scale', zoomScale);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial call to set scale on mount
+    handleScroll();
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="landing-page">
       <div className="hero-section">
@@ -9,8 +39,8 @@ const LandingPage = () => {
           <h1>Bringing Designers & Brands Together</h1>
           <p>Hire talent or offer your skills — collaborate, create, and thrive.</p>
           <div className="hero-buttons">
-            <button className="btn-primary">I am a Designer</button>
-            <button className="btn-secondary">I need a Designer</button>
+            <button className="btn-primary">I need a Designer</button>
+            <button className="btn-secondary">I am a Designer</button>
           </div>
         </div>
       </div>
@@ -68,8 +98,8 @@ const LandingPage = () => {
             <div className="step-icon-placeholder">
               {/* Add icon here later */}
             </div>
-            <h3 className="step-title">2. Bid for Work</h3>
-            <p className="step-description">Submit your proposal and pricing</p>
+            <h3 className="step-title">2. Submit Proposal</h3>
+            <p className="step-description">Bid on projects that match your skills</p>
           </div>
 
           <div className="step-card">
@@ -151,9 +181,9 @@ const LandingPage = () => {
               {/* Add customer photo here later */}
             </div>
             <p className="review-text">
-              "Working with SEWNA designers was an incredible experience! They brought my vision to life perfectly. The custom dress exceeded all my expectations."
+              "Working with SEWNA designers was an incredible experience! They brought my vision to life perfectly."
             </p>
-            <h4 className="reviewer-name">Jessica Martinez</h4>
+            <h4 className="reviewer-name">John Davis</h4>
             <div className="reviewer-rating">
               <span className="rating-star">★</span>
               <span className="rating-star">★</span>
@@ -168,9 +198,9 @@ const LandingPage = () => {
               {/* Add customer photo here later */}
             </div>
             <p className="review-text">
-              "I found the perfect designer for my wedding outfit. The communication was seamless and the final result was stunning. Highly recommend SEWNA!"
+              "Amazing platform! Found the perfect designer for my brand within days. Highly recommend!"
             </p>
-            <h4 className="reviewer-name">Priya Sharma</h4>
+            <h4 className="reviewer-name">Maria Garcia</h4>
             <div className="reviewer-rating">
               <span className="rating-star">★</span>
               <span className="rating-star">★</span>
@@ -185,9 +215,9 @@ const LandingPage = () => {
               {/* Add customer photo here later */}
             </div>
             <p className="review-text">
-              "The quality of work from SEWNA designers is outstanding. I've ordered three custom pieces and each one was crafted with incredible attention to detail."
+              "Professional, talented, and easy to work with. SEWNA made finding quality designers so simple!"
             </p>
-            <h4 className="reviewer-name">Robert Anderson</h4>
+            <h4 className="reviewer-name">Robert Wilson</h4>
             <div className="reviewer-rating">
               <span className="rating-star">★</span>
               <span className="rating-star">★</span>
@@ -202,7 +232,7 @@ const LandingPage = () => {
               {/* Add customer photo here later */}
             </div>
             <p className="review-text">
-              "SEWNA made it so easy to connect with talented designers. The entire process was smooth from start to finish. My custom jacket is absolutely perfect!"
+              "The entire process was smooth from start to finish. My custom jacket is absolutely perfect!"
             </p>
             <h4 className="reviewer-name">Lisa Thompson</h4>
             <div className="reviewer-rating">
