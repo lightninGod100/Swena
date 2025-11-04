@@ -13,6 +13,10 @@ import designer1Image from '../assets/images/d1.png';
 import designer2Image from '../assets/images/d2.png';
 import designer3Image from '../assets/images/d3.png';
 import designer4Image from '../assets/images/d4.png';
+import customer1 from '../assets/images/c1.png';
+import customer2 from '../assets/images/c2.png';
+import customer3 from '../assets/images/c3.png';
+import customer4 from '../assets/images/c4.png';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -69,7 +73,7 @@ const LandingPage = () => {
         </div>
       </div>
       {/* How It Works Section - For Clients */}
-      <div className="how-it-works-section">
+      <div className="how-to-get-work-section">
         <h2 className="section-title">How Hiring a Fashion Designer Works</h2>
         <div className="steps-container">
           <div className="step-card">
@@ -156,7 +160,7 @@ const LandingPage = () => {
               <span className="rating-star">★</span>
               <span className="rating-text">4.8 (1232 works)</span>
             </div>
-            <button className="btn-hire">Hire Them</button>
+            <button className="btn-hire">View Profile</button>
           </div>
 
           <div className="designer-card">
@@ -168,7 +172,7 @@ const LandingPage = () => {
               <span className="rating-star">★</span>
               <span className="rating-text">4.9 (987 works)</span>
             </div>
-            <button className="btn-hire">Hire Them</button>
+            <button className="btn-hire">View Profile</button>
           </div>
 
           <div className="designer-card">
@@ -180,7 +184,7 @@ const LandingPage = () => {
               <span className="rating-star">★</span>
               <span className="rating-text">4.7 (1456 works)</span>
             </div>
-            <button className="btn-hire">Hire Them</button>
+            <button className="btn-hire">View Profile</button>
           </div>
 
           <div className="designer-card">
@@ -192,7 +196,7 @@ const LandingPage = () => {
               <span className="rating-star">★</span>
               <span className="rating-text">4.8 (2103 works)</span>
             </div>
-            <button className="btn-hire">Hire Them</button>
+            <button className="btn-hire">View Profile</button>
           </div>
         </div>
       </div>
@@ -202,7 +206,7 @@ const LandingPage = () => {
         <div className="reviews-container">
           <div className="review-card">
             <div className="reviewer-avatar-placeholder">
-              {/* Add customer photo here later */}
+            <img src={customer1} alt="customer 1" />
             </div>
             <p className="review-text">
               "Working with SEWNA designers was an incredible experience! They brought my vision to life perfectly."
@@ -219,7 +223,7 @@ const LandingPage = () => {
 
           <div className="review-card">
             <div className="reviewer-avatar-placeholder">
-              {/* Add customer photo here later */}
+            <img src={customer2} alt="customer 2" />
             </div>
             <p className="review-text">
               "Amazing platform! Found the perfect designer for my brand within days. Highly recommend!"
@@ -236,7 +240,8 @@ const LandingPage = () => {
 
           <div className="review-card">
             <div className="reviewer-avatar-placeholder">
-              {/* Add customer photo here later */}
+            <img src={customer3} alt="customer 3" />
+
             </div>
             <p className="review-text">
               "Professional, talented, and easy to work with. SEWNA made finding quality designers so simple!"
@@ -253,7 +258,7 @@ const LandingPage = () => {
 
           <div className="review-card">
             <div className="reviewer-avatar-placeholder">
-              {/* Add customer photo here later */}
+            <img src={customer4} alt="customer 4" />
             </div>
             <p className="review-text">
               "The entire process was smooth from start to finish. My custom jacket is absolutely perfect!"
